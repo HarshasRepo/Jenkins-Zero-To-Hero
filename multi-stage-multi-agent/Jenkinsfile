@@ -8,9 +8,9 @@ pipeline {
       steps {
         sh 'mvn --version'
         sh 'echo "Compiling ... "'
-        sh 'javac simple_java_app.java'
+        javac simple_java_app.java
         sh 'echo "Execution ..."'
-        sh 'java simple_java_app'
+        java simple_java_app
         sh 'jar cvfe simple_java_app.jar simple_java_app *.class'
         sh 'echo "============================"'
         sh '#Execution:'
