@@ -7,6 +7,15 @@ pipeline {
       }
       steps {
         sh 'mvn --version'
+        sh 'echo "Compiling ... "'
+        sh 'javac HelloWorld.java'
+        sh 'echo "Execution ..."'
+        sh 'java HelloWorld'
+        sh 'jar cvfe HelloWorld.jar HelloWorld *.class'
+        sh 'echo "============================"'
+        sh '#Execution:'
+        sh 'java -jar HelloWorld.jar'
+        sh 'echo "============================"'
       }
     }
     stage('Front-end') {
