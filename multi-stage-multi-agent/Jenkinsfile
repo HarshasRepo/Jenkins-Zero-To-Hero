@@ -8,13 +8,13 @@ pipeline {
       steps {
         sh 'mvn --version'
         sh 'echo "Compiling ... "'
-        sh 'javac HelloWorld.java'
+        sh 'javac simple_java_app.java'
         sh 'echo "Execution ..."'
-        sh 'java HelloWorld'
-        sh 'jar cvfe HelloWorld.jar HelloWorld *.class'
+        sh 'java simple_java_app'
+        sh 'jar cvfe simple_java_app.jar simple_java_app *.class'
         sh 'echo "============================"'
         sh '#Execution:'
-        sh 'java -jar HelloWorld.jar'
+        sh 'java -jar simple_java_app.jar'
         sh 'echo "============================"'
       }
     }
