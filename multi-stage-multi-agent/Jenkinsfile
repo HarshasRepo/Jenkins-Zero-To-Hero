@@ -7,6 +7,7 @@ pipeline {
       }
       steps {
        sh 'mvn --version'
+       sh 'echo "This is to verify the Hooks to intiate CI/CD'
       }
     }
     stage('Front-end') {
